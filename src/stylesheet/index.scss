@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+@mixin btn($bg, $hover-bg) {
+  background: $bg;
+
+  &:hover {
+    background: $hover-bg;
+  }
+  
+  &:active {
+    background: $bg;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #F5F5F5;
+}
+
+button {
+  padding: 5px 0;
+  border: none;
+  transition: .2s background-color;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 5px;
+
+  @include btn(#48D1CC, #40E0D0)
+}
+
+table {
+  width: 100%;
+  margin: 70px auto 0;
+  border-collapse: collapse;
+
+  td, th {
+    border: 1px black solid;
+    padding: 20px 0;
+  }
+
+  tbody {
+    td {
+      text-align: center;
+
+      p {
+        font-weight: 300;
+        font-size: 18px;
+        padding: 0 5px;
+      }
+
+      input {
+        border: none;
+        outline: 1px grey solid;
+        padding: 5px;
+      }
+
+      button {
+        padding: 5px;
+        @include btn( #CD5C5C, #B22222);
+      }
+    }
+  }
+
+  .delete {
+    border: none;
+  }
+}
+
+.header {
+  background: lightblue;
+  
+  &__container {
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__admins-container {
+    flex-basis: 250px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__admin {
+    font-size: 20px;
+  }
+
+  &__button {
+    margin-top: 20px;
+    width: 70%;
+    align-self: center;
+  }
+}
+
+.counter {
+  span {
+    font-size: 25px;
+    &:first-child {
+      font-weight: 300;
+    }
+
+    &:last-child {
+      display: inline-block;
+      padding-left: 5px;
+    }
+  }
+}
+
+.filters-container {
+  width: 80%;
+  margin: 30px auto 0;
+
+  div {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+
+    input {
+      margin-left: 30px;
+      padding: 5px 10px;
+    }
+  }
+}
+
+.add-form-container {
+  width: 80%;
+  margin: 30px auto 0;
+}
+
+.add-form {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+   input {
+     flex-basis: 15%;
+     padding: 7px 5px;
+   }
+
+  button {
+    padding: 5px;
+  }
+}
+
+.table-container {
+  width: 80%;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+
+  table {
+    margin-top: 20px;
+  }
+
+  &__change-btn {
+    align-self: flex-end;
+    width: 160px;
+    text-align: center;
+  }
+}
+
+.title-non-requests {
+  text-align: center;
+  font-weight: 500;
+  font-size: 40px;
+  margin-top: 50px;
+}
+
+.without-admin {
+  width: 60%;
+  margin: 100px auto 0;
+}
